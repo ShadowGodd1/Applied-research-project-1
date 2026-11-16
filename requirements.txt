@@ -1,28 +1,11 @@
-# Pinned dependencies for the Nairobi rental analysis.
-# Recorded from the environment the project was developed and run in
-# (see reports/library_versions.json for the exact run record).
+# Deployment dependencies for the Streamlit dashboard.
 #
-# Python 3.9 or newer (developed on Python 3.12, Windows).
+# Streamlit Community Cloud installs this file. The dashboard needs only these
+# three packages; the heavy analysis stack is not required to serve the app.
+# Streamlit 1.50 requires pandas<3, so the deployed app uses pandas 2.3.3.
+#
+# For the notebook, install requirements-notebook.txt instead.
 
-# --- analysis pipeline ---
-numpy==2.3.5
-pandas==3.1.1
-scipy==1.18.1
-scikit-learn==1.9.1
-matplotlib==3.11.2
-seaborn==0.13.2
-shap==0.51.0
-
-# --- HTML parsing: crawler, coverage check, Erf Size reconciliation ---
-beautifulsoup4==4.13.3
-lxml==5.3.1
-httpx==0.28.1
-
-# --- Dashboard ---
 streamlit==1.50.0
 altair==5.5.0
-
-# --- Notebook execution ---
-nbformat==5.10.4
-nbconvert==7.16.6
-ipykernel==6.29.5
+pandas==2.3.3

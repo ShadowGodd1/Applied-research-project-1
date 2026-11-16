@@ -35,7 +35,8 @@ main.ipynb               complete pipeline, executed end to end
 dashboard/app.py         Streamlit dashboard
 .streamlit/config.toml   dashboard theme
 crawler/                 original collection code (reference only)
-requirements.txt         pinned dependencies
+requirements.txt         dashboard deployment dependencies
+requirements-notebook.txt  pinned analysis stack for the notebook
 ```
 
 Not in the repository, by design:
@@ -50,11 +51,14 @@ instead, as described below.
 
 Requirements: Python 3.12 and about eight minutes for a full run.
 
-1. Install the pinned dependencies:
+1. Install the pinned analysis stack:
 
    ```
-   pip install -r requirements.txt
+   pip install -r requirements-notebook.txt
    ```
+
+   The deployed dashboard uses the slimmer `requirements.txt`, so the notebook
+   and the cloud app can pin different pandas versions.
 
 2. Put the raw export at `data/raw/rentals.csv`. The optional SQLite cache at
    `data/raw/rentals.db` adds the database reconciliation and the Property24
@@ -91,7 +95,7 @@ Then open <http://localhost:8501>.
 
 ### Live app
 
-Live dashboard: `<add the deployed URL here>`
+Live dashboard: <https://nairobi-rent-lens.streamlit.app>
 
 ### Deploy it
 
