@@ -39,14 +39,6 @@ requirements.txt         dashboard deployment dependencies
 requirements-notebook.txt  pinned analysis stack for the notebook
 ```
 
-Not in the repository, by design:
-
-- `data/`, which holds the raw export and the cleaned table.
-- `reports/`, which holds generated tables, figures and documents.
-
-Both are rebuilt by the notebook. The deployed dashboard reads one private zip
-instead, as described below.
-
 ## Reproduce the analysis
 
 Requirements: Python 3.12 and about eight minutes for a full run.
