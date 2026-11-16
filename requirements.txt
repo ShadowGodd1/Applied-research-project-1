@@ -3,6 +3,8 @@
 # Streamlit Community Cloud installs this file. The dashboard needs only these
 # three packages; the heavy analysis stack is not required to serve the app.
 # Streamlit 1.50 requires pandas<3, so the deployed app uses pandas 2.3.3.
+# Run the app on Python 3.12: Altair 5.5 imports TypedDict from typing on 3.14
+# and fails on the closed=True argument.
 #
 # For the notebook, install requirements-notebook.txt instead.
 

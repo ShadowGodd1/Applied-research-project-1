@@ -104,13 +104,16 @@ The app is ready for Streamlit Community Cloud:
 1. Push this repository to GitHub.
 2. At <https://share.streamlit.io>, create an app from the repository, branch
    `main`, main file `dashboard/app.py`.
-3. In the app settings, open **Secrets** and add one entry:
+3. In the app settings, set **Python version** to **3.12**. Streamlit Cloud
+   defaults to 3.14, where Altair 5.5 fails. `runtime.txt` is ignored by Cloud,
+   so this has to be set in the dashboard.
+4. In the app settings, open **Secrets** and add one entry:
 
    ```
    DATA_URL = "https://your-private-host/dashboard_bundle.zip"
    ```
 
-4. Deploy. The app downloads the bundle once, caches it, and otherwise behaves
+5. Deploy. The app downloads the bundle once, caches it, and otherwise behaves
    exactly like the local version.
 
 `DATA_URL` must be a direct download link, because the app reads the bytes
