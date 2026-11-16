@@ -1,0 +1,32 @@
+# --- data: never published, raw or preprocessed --------------------------
+# raw/     source export and SQLite cache (listing URLs and contacts)
+# clean/   cleaned table and cleaning logs (listing-level rows)
+data/
+
+# --- generated outputs: rebuilt by main.ipynb ----------------------------
+# tables/, figures/, rent_guide/, model_report.md, data_profile.md, ...
+reports/
+
+# --- written report: kept outside the repository -------------------------
+report/
+
+# --- local build output and secrets --------------------------------------
+*.zip
+.streamlit/secrets.toml
+
+# --- Python --------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# --- editors and OS ------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- local logs ----------------------------------------------------------
+*.log

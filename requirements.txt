@@ -1,0 +1,28 @@
+# Pinned dependencies for the Nairobi rental analysis.
+# Recorded from the environment the project was developed and run in
+# (see reports/library_versions.json for the exact run record).
+#
+# Python 3.9 or newer (developed on Python 3.12, Windows).
+
+# --- analysis pipeline ---
+numpy==2.3.5
+pandas==3.1.1
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+shap==0.51.0
+
+# --- HTML parsing: crawler, coverage check, Erf Size reconciliation ---
+beautifulsoup4==4.13.3
+lxml==5.3.1
+httpx==0.28.1
+
+# --- Dashboard ---
+streamlit==1.50.0
+altair==5.5.0
+
+# --- Notebook execution ---
+nbformat==5.10.4
+nbconvert==7.16.6
+ipykernel==6.29.5
